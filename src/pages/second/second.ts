@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { HomePage } from '../home/home';
 
 /**
- * Generated class for the HomePage page.
+ * Generated class for the SecondPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,26 +11,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-second',
+  templateUrl: 'second.html',
 })
-export class HomePage {
-personName: string;
+export class SecondPage {
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
-  }
-  navTOAboutpage(){
-this.navCtrl.push('AboutPage',{message: "Hekko from the home page"
-});
-
+    console.log('ionViewDidLoad SecondPage');
   }
 
-  showGreeting(name:string){
-    console.log(name);
-    console.log(this.personName);
-  }
+navTOhomepage():void{
+this.navCtrl.setRoot('HomePage')
+
+}
 
 }
